@@ -10,7 +10,7 @@ class GameOfLife():
             for neighbour in self.__get_neighbours(cell):
                 if self.__should_become_alive(neighbour, cells):
                     next_generation.add(neighbour)
-        return next_generation
+        return list(next_generation)
 
     def __should_become_alive(self, cell, cells):
         return cell not in cells and\
